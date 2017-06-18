@@ -2,9 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: '<app-add-employee></app-add-employee>',
+
 })
 export class AppComponent {
+  name:string;
   title = 'app';
+  constructor() {
+  this.name='krishna';
+  console.log('AppComponent Loading...');
+  }
 }

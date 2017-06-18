@@ -1,0 +1,97 @@
+
+
+<h3> Employee Details</h3>
+<h3 style="float: right;margin-top: -35px;margin-right: 44%;">Preview</h3><hr/>
+<div style="width: 50%; float: left;">
+
+
+    <form class="form-horizontal">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" name="employee.name" [(ngModel)]="employee.name"/><br/>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" name="employee.email" [(ngModel)]="employee.email"/><br/>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="street" class="col-sm-2 control-label">Street</label>
+              <div class="col-sm-10">
+                <input type="text" name="employee.address.street" [(ngModel)]="employee.address.street"/><br/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="apartment" class="col-sm-2 control-label">Apartment</label>
+              <div class="col-sm-10">
+                <input type="text" name="employee.address.apt" [(ngModel)]="employee.address.apt"/><br/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="city" class="col-sm-2 control-label">City</label>
+              <div class="col-sm-10">
+                <input type="text" name="employee.address.city" [(ngModel)]="employee.address.city"/><br/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="state" class="col-sm-2 control-label">State</label>
+              <div class="col-sm-10">
+                <input type="text" name="employee.address.state" [(ngModel)]="employee.address.state"/><br/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="zip" class="col-sm-2 control-label">Zip</label>
+              <div class="col-sm-10">
+                <input type="text" name="employee.address.zip" [(ngModel)]="employee.address.zip"/><br/>
+              </div>
+          </div>
+          
+          <div class="form-group">
+              <label for="country" class="col-sm-2 control-label">Country</label>
+              <div class="col-sm-10">
+                <input type="text" name="employee.address.country" [(ngModel)]="employee.address.country"/><br/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="phone" class="col-sm-2 control-label">Phone</label>
+              <div class="col-sm-10">
+                <input type="phone" name="employee.phone" [(ngModel)]="employee.phone"/><br/>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary btn-lg">Add Employee</button>
+              </div>
+          </div>
+
+
+    </form>
+
+</div>
+<div style="margin-left: 50%; background-color: #eef;top:50px;">
+
+
+  <strong>{{employee.name}}</strong><br/>
+  {{employee.email}}<br/>
+  
+  <address>
+  {{employee.address.street}}<br/>
+  {{employee.address.apt}}<br/>
+  {{employee.address.city}}
+  {{employee.address.state}}
+  {{employee.address.zip}}<br/>
+  {{employee.address.country}}<br/>
+  </address>
+  
+  <abbr title="Phone">P:</abbr>{{employee.phone}}
+</div>
