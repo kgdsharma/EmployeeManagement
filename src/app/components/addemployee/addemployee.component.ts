@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Employee} from '../model/employee.model';
-import {Address} from '../model/employee.model';
+import {EmployeeService} from '../services/employee.service';
+
 
 @Component({
   selector: 'app-add-employee',
@@ -8,13 +9,29 @@ import {Address} from '../model/employee.model';
   styleUrls: ['addemployee.component.css'],
 
   providers: [Employee,
-            Address]
+             EmployeeService]
 
 })
 export class AddEmployeeComponent {
 
-  constructor(private employee: Employee) {
+  employee1:Employee[];
+  // employeeService:EmployeeService;
+
+  constructor(private employee: Employee, private empService: EmployeeService) {
+    // this.employeeService=empService;
     console.log('Add Employee Loading...');
+    this.empService.getEmployees().subscribe(employees => {
+      this.employee= employees[0];
+    console.log('Service Employee'+employees);
+    });
+
+    // this.employee=this.employee1[0];
+  }
+
+  addEmployee() {
+
+    console.log('in AddEMPLOYEE');
+    this.empService.saveEmployee(this.employee);
   }
 
 }

@@ -6,6 +6,12 @@
 
 
     <form class="form-horizontal">
+    	  <div class="form-group">
+            <label for="employeeId" class="col-sm-2 control-label">Employee Id</label>
+            <div class="col-sm-10">
+              <input type="text" name="employee.employeeId" [(ngModel)]="employee.employeeId"/><br/>
+            </div>
+          </div>
           <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Name</label>
             <div class="col-sm-10">
@@ -22,42 +28,42 @@
           <div class="form-group">
               <label for="street" class="col-sm-2 control-label">Street</label>
               <div class="col-sm-10">
-                <input type="text" name="employee.address.street" [(ngModel)]="employee.address.street"/><br/>
+                <input type="text" name="employee.street" [(ngModel)]="employee.street"/><br/>
               </div>
           </div>
 
           <div class="form-group">
               <label for="apartment" class="col-sm-2 control-label">Apartment</label>
               <div class="col-sm-10">
-                <input type="text" name="employee.address.apt" [(ngModel)]="employee.address.apt"/><br/>
+                <input type="text" name="employee.apt" [(ngModel)]="employee.apt"/><br/>
               </div>
           </div>
 
           <div class="form-group">
               <label for="city" class="col-sm-2 control-label">City</label>
               <div class="col-sm-10">
-                <input type="text" name="employee.address.city" [(ngModel)]="employee.address.city"/><br/>
+                <input type="text" name="employee.city" [(ngModel)]="employee.city"/><br/>
               </div>
           </div>
 
           <div class="form-group">
               <label for="state" class="col-sm-2 control-label">State</label>
               <div class="col-sm-10">
-                <input type="text" name="employee.address.state" [(ngModel)]="employee.address.state"/><br/>
+                <input type="text" name="employee.state" [(ngModel)]="employee.state"/><br/>
               </div>
           </div>
 
           <div class="form-group">
               <label for="zip" class="col-sm-2 control-label">Zip</label>
               <div class="col-sm-10">
-                <input type="text" name="employee.address.zip" [(ngModel)]="employee.address.zip"/><br/>
+                <input type="text" name="employee.zip" [(ngModel)]="employee.zip"/><br/>
               </div>
           </div>
           
           <div class="form-group">
               <label for="country" class="col-sm-2 control-label">Country</label>
               <div class="col-sm-10">
-                <input type="text" name="employee.address.country" [(ngModel)]="employee.address.country"/><br/>
+                <input type="text" name="employee.country" [(ngModel)]="employee.country"/><br/>
               </div>
           </div>
 
@@ -70,7 +76,7 @@
 
           <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-primary btn-lg">Add Employee</button>
+                <button (click)="addEmployee()" class="btn btn-primary btn-lg">Add Employee</button>
               </div>
           </div>
 
@@ -85,12 +91,12 @@
   {{employee.email}}<br/>
   
   <address>
-  {{employee.address.street}}<br/>
-  {{employee.address.apt}}<br/>
-  {{employee.address.city}}
-  {{employee.address.state}}
-  {{employee.address.zip}}<br/>
-  {{employee.address.country}}<br/>
+  {{employee.street}}<br/>
+  {{employee.apt}}<br/>
+  {{employee.city}}
+  {{employee.state}}
+  {{employee.zip}}<br/>
+  {{employee.country}}<br/>
   </address>
   
   <abbr title="Phone">P:</abbr>{{employee.phone}}
