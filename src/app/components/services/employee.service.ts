@@ -19,10 +19,10 @@ export class EmployeeService {
     console.log('in Save Employee');
     console.log(employee);
     console.log(JSON.stringify(employee));
-    this.http.post('http://localhost:8080/auemployee',
+    return this.http.post('http://localhost:8080/auemployee',
       JSON.stringify(employee),
-
-    );
+      {headers:this.getHeaders()}
+    ).map(emp=> {console.log(emp)});
 
   }
 
@@ -30,7 +30,6 @@ export class EmployeeService {
     // I included these headers because otherwise FireFox
     // will request text/html
     const headers = new Headers();
-    headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json');
     return headers;
   }

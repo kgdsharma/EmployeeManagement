@@ -31,7 +31,9 @@ export class AddEmployeeComponent {
   addEmployee() {
 
     console.log('in AddEMPLOYEE');
-    this.empService.saveEmployee(this.employee);
+    this.empService.saveEmployee(this.employee).subscribe(employee=> {
+    console.log(employee);
+    });
   }
 
 }
