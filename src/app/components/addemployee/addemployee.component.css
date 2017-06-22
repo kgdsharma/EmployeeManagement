@@ -1,3 +1,11 @@
 .mycolor{
   background-color: @gray-lighter: lighten(#000, 93.5%);
 }
+
+.addEmpDiv{
+	width: 50%; float:left; margin-left: 5%;
+}
+
+.prevDiv{
+	margin-left: 54%; background-color: #eef;top:10%; width:30%;text-align: left;
+}
