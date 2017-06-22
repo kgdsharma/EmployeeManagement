@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Employee} from '../model/employee.model';
 import {EmployeeService} from '../services/employee.service';
+import {Router, ActivatedRoute} from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,10 @@ export class AddEmployeeComponent {
   employee1:Employee[];
   // employeeService:EmployeeService;
 
-  constructor(private employee: Employee, private empService: EmployeeService) {
+  constructor(
+    private router:Router,
+    private route:ActivatedRoute,
+    private employee: Employee, private empService: EmployeeService) {
     // this.employeeService=empService;
     console.log('Add Employee Loading...');
     this.empService.getEmployees().subscribe(employees => {
@@ -31,7 +35,9 @@ export class AddEmployeeComponent {
   addEmployee() {
 
     console.log('in AddEMPLOYEE');
-    this.empService.saveEmployee(this.employee).subscribe();
+    this.empService.saveEmployee(this.employee).subscribe(data=> {
+    this.router.navigate(['/employees']);
+    });
   }
 
 }
