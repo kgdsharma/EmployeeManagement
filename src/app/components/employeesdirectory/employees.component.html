@@ -2,6 +2,7 @@
 <table class="table table-striped">
   <thead>
   <tr>
+  	 <th>Employee Id</th>
      <th>Employee Name</th>
      <th>Email</th>
      <th>Phone</th>
@@ -11,6 +12,7 @@
   </tfoot>
   <tbody *ngFor="let employee of employees;">
   <tr>
+  	 <td>{{employee.employeeId}}</td>
      <td>{{employee.name}}</td>
      <td>{{employee.email}}</td>
      <td>{{employee.phone}}</td>
