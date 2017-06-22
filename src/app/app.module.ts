@@ -5,17 +5,21 @@ import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AddEmployeeComponent } from './components/addemployee/addemployee.component';
+import {EmployeesComponent} from './components/employeesdirectory/employees.component';
+import {routing} from './app.routing';
 //  import {Employee} from './components/model/employee.model';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    EmployeesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
