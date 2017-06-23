@@ -16,6 +16,8 @@ import {EmployeeService} from '../services/employee.service';
 export class EmployeesComponent {
 
   employees: Employee[];
+  anyEmployee:Employee;
+  showdelete = false;
 
   constructor(private employee: Employee, private empService: EmployeeService) {
 
@@ -24,5 +26,15 @@ export class EmployeesComponent {
       this.employees= employees;
     console.log('Service Employee'+employees);
     });
+  }
+
+  getEmployee(id:string) {
+    console.log('calling getEmployee '+id);
+  this.empService.getEmployeeById(id).subscribe(someEmployee=> {
+  this.anyEmployee=someEmployee;
+    this.showdelete=true;
+
+    console.log(this.anyEmployee);
+  });
   }
 }

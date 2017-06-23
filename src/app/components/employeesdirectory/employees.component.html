@@ -12,7 +12,7 @@
   </tfoot>
   <tbody *ngFor="let employee of employees;">
   <tr>
-  	 <td>{{employee.employeeId}}</td>
+  	 <td><a (click)="getEmployee(employee.employeeId)">{{employee.employeeId}}</a></td>
      <td>{{employee.name}}</td>
      <td>{{employee.email}}</td>
      <td>{{employee.phone}}</td>
@@ -20,4 +20,20 @@
   </tbody>
 </table>
 
+</div>
+
+<div *ngIf="showdelete" class="overlay">
+  <strong>{{anyEmployee.name}}</strong><br/>
+  {{anyEmployee.email}}<br/>
+  
+  <address>
+  {{anyEmployee.street}}<br/>
+  {{anyEmployee.apt}}<br/>
+  {{anyEmployee.city}}
+  {{anyEmployee.state}}
+  {{anyEmployee.zip}}<br/>
+  {{anyEmployee.country}}<br/>
+  </address>
+  
+  <abbr title="Phone">P:</abbr>{{anyEmployee.phone}}
 </div>

@@ -26,6 +26,13 @@ export class EmployeeService {
 
   }
 
+
+  getEmployeeById(id:string) {
+      return this.http.get('http://localhost:8080/employees/'+id)
+      .map(res=>res.json());
+
+  }
+
   private getHeaders() {
     // I included these headers because otherwise FireFox
     // will request text/html
