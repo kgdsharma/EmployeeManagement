@@ -45,7 +45,7 @@ export class EmployeesComponent {
 
   deleteEmployee(id:string) {
 
-      console.log('calling delete Employee in component '+ id);
+      console.log('calling delete Employee '+ id);
   this.empService.deleteEmployee(id).subscribe(data=> {
     this.showdelete=false;
     this.employees.splice(this.index,1);
