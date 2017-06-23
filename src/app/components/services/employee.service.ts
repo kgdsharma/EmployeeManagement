@@ -28,8 +28,14 @@ export class EmployeeService {
 
 
   getEmployeeById(id:string) {
-      return this.http.get('http://localhost:8080/employees/'+id)
+      return this.http.get('http://localhost:8080/employee/'+id)
       .map(res=>res.json());
+
+  }
+
+    deleteEmployee(id:string) {
+      return this.http.delete('http://localhost:8080/deleteemployee/'+id)
+      .map(res=> {console.log('Emplyee deleted Id =>' +id )});
 
   }
 

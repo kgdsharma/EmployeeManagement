@@ -6,13 +6,15 @@
      right: 30%;
      bottom: 20%;
      width: 40%;
-     height:30%;
-     background-color: #e4e4e4;
+     height:50%;
+     background-color: rgba(245, 245, 233, 0.98);
      z-index: 9999;
      color: white;
-     display: inline-block;
+     display: block;
      opacity: 1.0;
-     text-align: center;
+     text-align: left;
+     color: #27693c;
+     border: 5px solid beige;
      
      
  }
