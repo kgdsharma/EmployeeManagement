@@ -24,7 +24,7 @@ export class EmployeesComponent {
 
   constructor(private employee: Employee, private empService: EmployeeService) {
 
-  console.log('Employees Component Loading.');
+  console.log('Employees Component Loading..');
     this.empService.getEmployees().subscribe(employees => {
       this.employees= employees;
     console.log('Service Employee'+employees);
