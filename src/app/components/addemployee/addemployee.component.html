@@ -1,103 +1,106 @@
 
 
-<h3 style="margin-left:10%"> Employee Details</h3>
-<h3 style="float: right;margin-top: -35px;margin-right: 40%;">Preview</h3><hr/>
+<h3 style="margin-left: 10%">Employee Details</h3>
+<h3 style="float: right; margin-top: -35px; margin-right: 40%;">Preview</h3>
+<hr />
 <div class="addEmpDiv">
 
 
-    <form class="form-horizontal">
-    	  <div class="form-group">
-            <label for="employeeId" class="col-sm-2 control-label">Employee Id</label>
-            <div class="col-sm-10">
-              <input type="text" name="employee.employeeId" [(ngModel)]="employee.employeeId"/><br/>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="name" class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-10">
-              <input type="text" name="employee.name" [(ngModel)]="employee.name"/><br/>
-            </div>
-          </div>
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="employeeId" class="col-sm-2 control-label">Employee
+				Id</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.employeeId"
+					[(ngModel)]="employee.employeeId" /><br />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="name" class="col-sm-2 control-label">Name</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.name" [(ngModel)]="employee.name" /><br />
+			</div>
+		</div>
 
-          <div class="form-group">
-              <label for="email" class="col-sm-2 control-label">Email</label>
-              <div class="col-sm-10">
-                <input type="email" name="employee.email" [(ngModel)]="employee.email"/><br/>
-              </div>
-          </div>
-          <div class="form-group">
-              <label for="street" class="col-sm-2 control-label">Street</label>
-              <div class="col-sm-10">
-                <input type="text" name="employee.street" [(ngModel)]="employee.street"/><br/>
-              </div>
-          </div>
+		<div class="form-group">
+			<label for="email" class="col-sm-2 control-label">Email</label>
+			<div class="col-sm-10">
+				<input type="email" name="employee.email"
+					[(ngModel)]="employee.email" /><br />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="street" class="col-sm-2 control-label">Street</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.street"
+					[(ngModel)]="employee.street" /><br />
+			</div>
+		</div>
 
-          <div class="form-group">
-              <label for="apartment" class="col-sm-2 control-label">Apartment</label>
-              <div class="col-sm-10">
-                <input type="text" name="employee.apt" [(ngModel)]="employee.apt"/><br/>
-              </div>
-          </div>
+		<div class="form-group">
+			<label for="apartment" class="col-sm-2 control-label">Apartment</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.apt" [(ngModel)]="employee.apt" /><br />
+			</div>
+		</div>
 
-          <div class="form-group">
-              <label for="city" class="col-sm-2 control-label">City</label>
-              <div class="col-sm-10">
-                <input type="text" name="employee.city" [(ngModel)]="employee.city"/><br/>
-              </div>
-          </div>
+		<div class="form-group">
+			<label for="city" class="col-sm-2 control-label">City</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.city" [(ngModel)]="employee.city" /><br />
+			</div>
+		</div>
 
-          <div class="form-group">
-              <label for="state" class="col-sm-2 control-label">State</label>
-              <div class="col-sm-10">
-                <input type="text" name="employee.state" [(ngModel)]="employee.state"/><br/>
-              </div>
-          </div>
+		<div class="form-group">
+			<label for="state" class="col-sm-2 control-label">State</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.state"
+					[(ngModel)]="employee.state" /><br />
+			</div>
+		</div>
 
-          <div class="form-group">
-              <label for="zip" class="col-sm-2 control-label">Zip</label>
-              <div class="col-sm-10">
-                <input type="text" name="employee.zip" [(ngModel)]="employee.zip"/><br/>
-              </div>
-          </div>
-          
-          <div class="form-group">
-              <label for="country" class="col-sm-2 control-label">Country</label>
-              <div class="col-sm-10">
-                <input type="text" name="employee.country" [(ngModel)]="employee.country"/><br/>
-              </div>
-          </div>
+		<div class="form-group">
+			<label for="zip" class="col-sm-2 control-label">Zip</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.zip" [(ngModel)]="employee.zip" /><br />
+			</div>
+		</div>
 
-          <div class="form-group">
-              <label for="phone" class="col-sm-2 control-label">Phone</label>
-              <div class="col-sm-10">
-                <input type="phone" name="employee.phone" [(ngModel)]="employee.phone"/><br/>
-              </div>
-          </div>
+		<div class="form-group">
+			<label for="country" class="col-sm-2 control-label">Country</label>
+			<div class="col-sm-10">
+				<input type="text" name="employee.country"
+					[(ngModel)]="employee.country" /><br />
+			</div>
+		</div>
 
-          <div class="form-group">
-              <div class="col-sm-offset-2 col-sm-10">
-                <button (click)="addEmployee()" class="btn btn-primary btn-lg">Save</button>
-              </div>
-          </div>
+		<div class="form-group">
+			<label for="phone" class="col-sm-2 control-label">Phone</label>
+			<div class="col-sm-10">
+				<input type="phone" name="employee.phone"
+					[(ngModel)]="employee.phone" /><br />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button (click)="addEmployee()" class="btn btn-primary btn-lg">Save</button>
+			</div>
+		</div>
 
 
-    </form>
+	</form>
 
 </div>
 <div class="prevDiv">
 
 
-  <strong>{{employee.name}}</strong><br/>
-  {{employee.email}}<br/>
-  
-  <address>
-  {{employee.street}}<br/>
-  {{employee.apt}}<br/>
-  {{employee.city}}
-  {{employee.state}}
-  {{employee.zip}}<br/>
-  {{employee.country}}<br/>
-  </address>
-  
-  <abbr title="Phone">P:</abbr>{{employee.phone}}
+	<strong>{{employee.name}}</strong><br /> {{employee.email}}<br />
+
+	<address>
+		{{employee.street}}<br /> {{employee.apt}}<br /> {{employee.city}}
+		{{employee.state}} {{employee.zip}}<br /> {{employee.country}}<br />
+	</address>
+
+	<abbr title="Phone">P:</abbr>{{employee.phone}}
 </div>
