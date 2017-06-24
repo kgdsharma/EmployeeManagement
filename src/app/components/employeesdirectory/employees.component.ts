@@ -58,7 +58,6 @@ export class EmployeesComponent {
 
   showEmployeeInEditMode(id: string) {
     this.showdelete = false;
-    // this.index=index;
     console.log('calling showEmployeeInEditMode of EmployeesComponent for employee ID =>' + id);
     this.empService.getEmployeeById(id).subscribe(someEmployee => {
       this.employeeEdit = someEmployee;
@@ -69,9 +68,8 @@ export class EmployeesComponent {
 
   updateEmployee() {
 
-    console.log('Calling updateEmployee of EmployeesComponent for employee ID =>'+this.employeeEdit.employeeId);
+    console.log('Calling updateEmployee of EmployeesComponent for employee ID =>' + this.employeeEdit.employeeId);
     this.empService.saveEmployee(this.employeeEdit).subscribe(data => {
-      // this.router.navigate(['/employees']);
       this.employees.splice(this.index, 1, this.employeeEdit);
       this.showEdit = false;
     });
