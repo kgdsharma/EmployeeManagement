@@ -12,7 +12,7 @@
 		</tfoot>
 		<tbody *ngFor="let employee of employees; let i=index ">
 			<tr>
-				<td><a (click)="getEmployee(employee.employeeId,i.valueOf())">{{employee.employeeId}}</a></td>
+				<td style="cursor: pointer;"><a (click)="getEmployee(employee.employeeId,i.valueOf())">{{employee.employeeId}}</a></td>
 				<td>{{employee.name}}</td>
 				<td>{{employee.email}}</td>
 				<td>{{employee.phone}}</td>
