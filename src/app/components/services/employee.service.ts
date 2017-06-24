@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import {Employee} from '../model/employee.model';
-import {Headers} from '@angular/http';
+import { Employee } from '../model/employee.model';
+import { Headers } from '@angular/http';
 
 @Injectable()
 export class EmployeeService {
@@ -11,37 +11,33 @@ export class EmployeeService {
   }
   getEmployees() {
     return this.http.get('http://localhost:8080/employees')
-      .map(res=>res.json());
+      .map(res => res.json());
 
   }
 
-  saveEmployee(employee:Employee) {
-    console.log('in Save Employee');
-    console.log(employee);
-    console.log(JSON.stringify(employee));
+  saveEmployee(employee: Employee) {
+
     return this.http.post('http://localhost:8080/auemployee',
       JSON.stringify(employee),
-      {headers:this.getHeaders()}
-    ).map(emp=> {console.log(emp)});
+      { headers: this.getHeaders() }
+    ).map(emp => { console.log(emp) });
 
   }
 
 
-  getEmployeeById(id:string) {
-      return this.http.get('http://localhost:8080/employee/'+id)
-      .map(res=>res.json());
+  getEmployeeById(id: string) {
+    return this.http.get('http://localhost:8080/employee/' + id)
+      .map(res => res.json());
 
   }
 
-    deleteEmployee(id:string) {
-      return this.http.delete('http://localhost:8080/deleteemployee/'+id)
-      .map(res=> {console.log('Emplyee deleted Id =>' +id )});
+  deleteEmployee(id: string) {
+    return this.http.delete('http://localhost:8080/deleteemployee/' + id)
+      .map(res => { console.log('Emplyee deleted Id =>' + id) });
 
   }
 
   private getHeaders() {
-    // I included these headers because otherwise FireFox
-    // will request text/html
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     return headers;

@@ -15,26 +15,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AddEmployeeComponent {
 
-  employee1: Employee[];
-  // employeeService:EmployeeService;
+
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private employee: Employee, private empService: EmployeeService) {
-    // this.employeeService=empService;
-    console.log('Add Employee Loading...');
-    this.empService.getEmployees().subscribe(employees => {
-      this.employee = employees[0];
-      console.log('Service Employee' + employees);
-    });
-
-    // this.employee=this.employee1[0];
-  }
+    private employee: Employee, private empService: EmployeeService) {  }
 
   addEmployee() {
 
-    console.log('in AddEMPLOYEE');
+    console.log('Calling addEmployee of AddEmployeeComponent');
     this.empService.saveEmployee(this.employee).subscribe(data => {
       this.router.navigate(['/employees']);
     });

@@ -33,19 +33,17 @@ export class EmployeesComponent {
 
   getEmployee(id: string, index: number) {
     this.index = index;
-    console.log('calling getEmployee ' + id);
+    console.log('calling getEmployee of EmployeesComponent for employee ID =>' + id);
 
     this.empService.getEmployeeById(id).subscribe(someEmployee => {
       this.anyEmployee = someEmployee;
       this.showdelete = true;
-
-      console.log(this.anyEmployee);
     });
   }
 
   deleteEmployee(id: string) {
 
-    console.log('calling delete Employee in component ' + id);
+    console.log('calling deleteEmployee of EmployeesComponent for employee ID =>' + id);
     this.empService.deleteEmployee(id).subscribe(data => {
       this.showdelete = false;
       this.employees.splice(this.index, 1);
@@ -61,19 +59,17 @@ export class EmployeesComponent {
   showEmployeeInEditMode(id: string) {
     this.showdelete = false;
     // this.index=index;
-    console.log('calling getEmployee ' + id);
+    console.log('calling showEmployeeInEditMode of EmployeesComponent for employee ID =>' + id);
     this.empService.getEmployeeById(id).subscribe(someEmployee => {
       this.employeeEdit = someEmployee;
       this.showEdit = true;
-
-      console.log(this.employeeEdit);
     });
   }
 
 
   updateEmployee() {
 
-    console.log('in update EMPLOYEE');
+    console.log('Calling updateEmployee of EmployeesComponent for employee ID =>'+this.employeeEdit.employeeId);
     this.empService.saveEmployee(this.employeeEdit).subscribe(data => {
       // this.router.navigate(['/employees']);
       this.employees.splice(this.index, 1, this.employeeEdit);
