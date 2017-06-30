@@ -14,10 +14,10 @@ import { EmployeeService } from '../services/employee.service';
 
 export class EmployeesComponent {
 
-  employees: Employee[];
-  anyEmployee: Employee;
-  employeeEdit: Employee;
-  deletedEmployee: Employee;
+  public employees: Employee[];
+  public anyEmployee: Employee;
+  public employeeEdit: Employee;
+  public deletedEmployee: Employee;
   showdelete = false;
   showEdit = false;
   index: number;
