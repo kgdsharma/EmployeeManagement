@@ -22,7 +22,7 @@ export class EmployeesComponent {
   showEdit = false;
   index: number;
 
-  constructor(private employee: Employee, private empService: EmployeeService) {
+  constructor(public employee: Employee, private empService: EmployeeService) {
 
     console.log('Employees Component Loading.');
     this.empService.getEmployees().subscribe(employees => {

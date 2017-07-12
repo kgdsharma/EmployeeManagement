@@ -20,7 +20,7 @@ export class AddEmployeeComponent {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private employee: Employee, private empService: EmployeeService) {  }
+    public employee: Employee, private empService: EmployeeService) {  }
 
   addEmployee() {
 
